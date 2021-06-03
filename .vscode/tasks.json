@@ -1,74 +1,74 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "cppbuild",
-			"label": "gcc build active file",
-			"command": "/usr/bin/make",
-			"args": [],
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "gcc build active file",
+            "command": "/usr/bin/make",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "presentation": {
                 "showReuseMessage": false,
             },
-			"problemMatcher": [
-				"$gcc",
-			],
-			"detail": "Build with /usr/bin/gcc"
-		},
-		{
-			"type": "cppbuild",
-			"label": "gcc build for debugging",
-			"command": "/usr/bin/make",
-			"args": [
-				"debug"
-			],
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
+            "problemMatcher": [
+                "$gcc",
+            ],
+            "detail": "Build with /usr/bin/gcc"
+        },
+        {
+            "type": "cppbuild",
+            "label": "gcc build for debugging",
+            "command": "/usr/bin/make",
+            "args": [
+                "debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "presentation": {
                 "showReuseMessage": false,
             },
-			"problemMatcher": [
-				"$gcc"
-			],
-			"detail": "Build with /usr/bin/gcc"
-		},
-		{
-			"type": "shell",
-			"label": "Build and run active file",
-			"command": "${fileDirname}/${fileBasenameNoExtension}",
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
-			"problemMatcher": [
-				"$gcc"
-			],
-			"dependsOn": [
-				"gcc build active file" //wil run this task before
-			],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build with /usr/bin/gcc"
+        },
+        {
+            "type": "shell",
+            "label": "Build and run active file",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "dependsOn": [
+                "gcc build active file" //wil run this task before
+            ],
             "presentation": {
                 "clear": true, //Clear the screen
             },
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
-			"detail": "Build with gcc and run"
-		},
-		{
-			"type": "shell",
-			"label": "Run active file",
-			"command": "${fileDirname}/${fileBasenameNoExtension}",
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
-			"problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build with gcc and run"
+        },
+        {
+            "type": "shell",
+            "label": "Run active file",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
             "presentation": {
                 "clear": true, //Clear the screen
             },
-			"detail": "Run the active file"
-		}
-	]
+            "detail": "Run the active file"
+        }
+    ]
 }

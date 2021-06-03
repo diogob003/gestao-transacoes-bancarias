@@ -1,5 +1,5 @@
 /*
-    Biblioteca para trabalhar com lista sequêncial e tratar dados
+    Biblioteca para trabalhar com lista sequencial e tratar dados
     permitindo criação, remoção, adição e consulta
 
     (c) 2021 Diogo B. Silva
@@ -284,7 +284,7 @@ void personListToAlphabeticalOrder(_PERSON_LIST* list){
     int k=0;
     int i=0;
 
-    // Percorre a lista de pessoas várias vezes
+    // Percorre a lista de pessoas várias vezes. Este algoritmo é semelhante ao Bubble Sort
     for(k=0; (k < list->quantity * list->quantity); k++){
         /* Coloca a primeira letra do nome da pessoa em maiúscula
            → 1ª letra do nome recebe sua versão maiúscula */
@@ -589,16 +589,18 @@ void getAllAccountsOf(_ACCOUNT_LIST* list, unsigned long cpf_cnpj){
     }
 
     i = 0;
-    // Ordena lista de saldo
-    while(balancesMask[i] < balancesMask[i+1]){
-        tmpBalance = balancesMask[i];
-        balancesMask[i] = balancesMask[i+1];
-        balancesMask[i+1] = tmpBalance;
+    if(accountsQuantity > 1){ // Só vai ordenar se tiver 2 ou mais elementos
+        // Ordena lista de saldo
+        while(balancesMask[i] < balancesMask[i+1]){
+            tmpBalance = balancesMask[i];
+            balancesMask[i] = balancesMask[i+1];
+            balancesMask[i+1] = tmpBalance;
 
-        i++;
-        // Se chegar no final da lista, volta do início
-        if(i >= accountsQuantity - 1){
-            i = 0;
+            i++;
+            // Se chegar no final da lista, volta do início
+            if(i >= accountsQuantity - 1){
+                i = 0;
+            }
         }
     }
 

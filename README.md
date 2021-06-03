@@ -14,7 +14,7 @@ A instalação e compilação são simples. Os requisitos são:
 
 Basta criar uma cópia do repositório
 ```bash
-$ git clone https://github.com/diogoborges14/gestao-transacoes-bancarias.git
+$ git clone https://github.com/diogob003/gestao-transacoes-bancarias.git
 ```
 Depois entrar no diretório, compilar e executar
 ```bash

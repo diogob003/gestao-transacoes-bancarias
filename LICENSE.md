@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2021 Diogo Borges Silva <diogoborges@discente.ufg.br>
+Copyright (c) 2021 diogob003 <diogob003@outlook.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
